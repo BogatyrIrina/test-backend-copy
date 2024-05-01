@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  budget-db:
+    image: 'postgres:13.1-alpine'
+    ports:
+      - "45533:5432"
+    container_name: budget-db
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev
+      - POSTGRES_DB=dev_mem
